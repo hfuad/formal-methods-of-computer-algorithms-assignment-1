@@ -1,0 +1,6 @@
+# Huge kudos to all contributors to https://github.com/github/gitignore which is where
+# this file came from.
+
+syntax: glob
+.idea/*
+venv/*
