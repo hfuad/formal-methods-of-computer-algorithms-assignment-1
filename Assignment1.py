@@ -25,17 +25,21 @@ def euclidean_distance(p1, p2):
 # brute force
 def brute_force(vlist, enableLogging):
     minimum_Distance = 999
-    minimum_index = maximum_index = -1
+    minimum_index = -1
     iterations = 0
-    maximum_Distance = -999
+    minimize_max_distance = 999
+    minimize_max_distance_index = 999
     for i in range(0, len(vList)):
         summation = avg = count = 0
+        local_maximum = -999
         for y in range(0, len(vList)):
             if i != y:
                 dist = euclidean_distance(vList[i], vList[y])
                 count += 1
                 summation += dist
                 iterations += 1
+                if dist > local_maximum:
+                    local_maximum = dist
                 if enableLogging:
                     print("\t", i, ":", y, "\t", dist)
         avg = summation/count
@@ -45,16 +49,16 @@ def brute_force(vlist, enableLogging):
         if avg < minimum_Distance:
             minimum_Distance = avg
             minimum_index = i
-        if avg > maximum_Distance:
-            maximum_Distance = avg
-            maximum_index = i
-    return minimum_index, maximum_index, minimum_Distance, maximum_Distance, iterations
+        if local_maximum<minimize_max_distance:
+            minimize_max_distance = local_maximum
+            minimize_max_distance_index = i
+    return minimum_index,  minimum_Distance, minimize_max_distance_index, minimize_max_distance , iterations
 
-minimum_index, maximum_index, minimum_Distance, maximum_Distance, iterations = brute_force(vList, True)
+minimum_index,  minimum_Distance, minimize_max_distance_index, minimize_max_distance, iterations = brute_force(vList, True)
 
 print("-------------------")
 print("min distance:", minimum_index, "\tvalue:", minimum_Distance)
-print("max distance:", maximum_index, "\tvalue:", maximum_Distance)
+print("minimize max distance:", minimize_max_distance_index, "\tvalue:", minimize_max_distance)
 print("-------------------")
 print("complexity O(log n**2)")
 print("numerical complexity:")
@@ -73,11 +77,11 @@ for i in range(100):
     point = (random.randint(1,50),random.randint(1,50))
     vList.append(point)
 
-minimum_index, maximum_index, minimum_Distance, maximum_Distance, iterations = brute_force(vList, False)
+minimum_index,  minimum_Distance, minimize_max_distance_index, minimize_max_distance, iterations = brute_force(vList, False)
 
 print("-------------------")
 print("min distance:", minimum_index, "\tvalue:", minimum_Distance)
-print("max distance:", maximum_index, "\tvalue:", maximum_Distance)
+print("minimize max distance:", minimize_max_distance_index, "\tvalue:", minimize_max_distance)
 print("-------------------")
 print("complexity O(log n**2)")
 print("numerical complexity:")
