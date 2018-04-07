@@ -1,6 +1,8 @@
 # Formal Methods of Computer Algorithms - Assignment 1
 	Riham Nour  182031
 	Hussam Fuad 161101
+## Sample points
+[(20, 20), (30, 50), (60, 70), (20, 30), (90, 5)]
 ### display for n= 5
 #### 1)Using brute-force approach, design an algorithm to find the post-office location minimizing the average distance between the villages and the post office.
 	min distance: 3 	value: 40.81489150162855
@@ -19,10 +21,10 @@
 -------------------
 ### display for n= 100
 #### 1)Using brute-force approach, design an algorithm to find the post-office location minimizing the average distance between the villages and the post office.
-	min distance: 87 	value: 18.7153087607307
+	min distance: 71 	value: 18.180936886500835
 
 #### 2)Using brute-force approach, design an algorithm to find the post-office location minimizing the maximum distance from a village to the post office.
-	minimize max: 82 	value: 33.301651610693426
+	minimize max: 32 	value: 34.48187929913333
 
 #### 4)Analyze your designed algorithms mathematically and empirically.
 	Empirical Analysis : complexity O(log n**2)
