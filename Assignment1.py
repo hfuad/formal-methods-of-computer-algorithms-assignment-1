@@ -101,12 +101,12 @@ vlist = []
 for i in range(1000):
     point = (random.randint(1, 50), random.randint(1, 50))
     vlist.append(point)
-print("time for minAverage over 100000 ")
+print("##### time for minAverage over 100000 ")
 start = time.clock()
 brute_force(vlist, False, True, False)
 print(time.clock() - start)
 
-print("time for minimizeMaximum over 100000 ")
+print("##### time for minimizeMaximum over 100000 ")
 start = time.clock()
 brute_force(vlist, False, False, True)
 print(time.clock() - start)
