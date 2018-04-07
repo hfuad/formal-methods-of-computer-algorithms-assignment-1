@@ -21,10 +21,10 @@
 -------------------
 ### display for n= 1000
 #### 1) Using brute-force approach, design an algorithm to find the post-office location minimizing the average distance between the villages and the post office.
-	min distance: 184 	value: 19.559409669100827
+	min distance: 649 	value: 19.132580880344165
 
 #### 2) Using brute-force approach, design an algorithm to find the post-office location minimizing the maximum distance from a village to the post office.
-	minimize max: 918 	value: 34.655446902326915
+	minimize max: 649 	value: 34.655446902326915
 
 #### 4) Analyze your designed algorithms mathematically and empirically.
 	Empirical Analysis : complexity O(log n**2)
@@ -39,7 +39,7 @@
 maximum distance is more suitable since the best location for the post office is the one were it minimizes distance from the farthest village
 #### 5)ii)And which is faster to execute?
 since both have the same complexity maximum distance will be faster since it does not calculate and average before choosing the minimum distance
-##### time for minAverage over 100000
-1.557528539
-##### time for minimizeMaximum over 100000
-1.3432694070000002
+	time for minAverage over 100000
+		 1.4077937040000001
+	time for minimizeMaximum over 100000
+		 1.230958405

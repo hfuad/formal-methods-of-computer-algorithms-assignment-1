@@ -2,6 +2,8 @@ import math
 import random
 import time
 
+#git repo https://github.com/hfuad/formal-methods-of-computer-algorithms-assignment-1
+
 print("# Formal Methods of Computer Algorithms - Assignment 1")
 print("\tRiham Nour  182031")
 print("\tHussam Fuad 161101")
@@ -101,13 +103,13 @@ vlist = []
 for i in range(1000):
     point = (random.randint(1, 50), random.randint(1, 50))
     vlist.append(point)
-print("##### time for minAverage over 100000 ")
+print("\ttime for minAverage over 100000 ")
 start = time.clock()
 brute_force(vlist, False, True, False)
-print(time.clock() - start)
+print("\t\t", time.clock() - start)
 
-print("##### time for minimizeMaximum over 100000 ")
+print("\ttime for minimizeMaximum over 100000 ")
 start = time.clock()
 brute_force(vlist, False, False, True)
-print(time.clock() - start)
+print("\t\t", time.clock() - start)
 
